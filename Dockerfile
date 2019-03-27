@@ -15,9 +15,10 @@ RUN CHROMEDRIVER_VERSION=`wget --no-verbose --output-document - https://chromedr
     chmod +x /opt/chromedriver/chromedriver && \
     ln -fs /opt/chromedriver/chromedriver /usr/local/bin/chromedriver
 	
-RUN mkdir -p opt/chromedriver/tests
-RUN mkdir -p opt/chromedriver/keywords
-RUN mkdir -p opt/chromedriver/locators
-RUN mkdir -p opt/chromedriver/results
+VOLUME /opt/robotframework/results
+VOLUME /opt/robotframework/tests
+VOLUME /opt/robotframework/keywords
+VOLUME /opt/robotframework/locators
+
 
 ENTRYPOINT ['robot']
