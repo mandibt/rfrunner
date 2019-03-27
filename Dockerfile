@@ -15,4 +15,4 @@ RUN CHROMEDRIVER_VERSION=`wget --no-verbose --output-document - https://chromedr
     chmod +x /opt/chromedriver/chromedriver && \
     ln -fs /opt/chromedriver/chromedriver /usr/local/bin/chromedriver
 
-RUN chmod +x ./run_tests.sh
+ENTRYPOINT ['robot']
