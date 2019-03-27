@@ -2,11 +2,11 @@
 Test Setup        Open application    ${browser}
 Test Teardown     Close Browser
 Library           SeleniumLibrary
-Resource          ../Keywords/AuctionCalendar.robot
-Resource          ../Keywords/AuctionResults.robot
-Resource          ../Keywords/Bidfom.robot
-Resource          ../Keywords/HomePage.robot
-Resource          ../Keywords/OpenAuctions.robot
+Resource          /opt/robotframeworkkeywords/AuctionCalendar.robot
+Resource          /opt/robotframeworkkeywords/AuctionResults.robot
+Resource          /opt/robotframeworkkeywords/Bidfom.robot
+Resource          /opt/robotframeworkkeywords/HomePage.robot
+Resource          /opt/robotframeworkkeywords/OpenAuctions.robot
 
 *** Test Cases ***
 Open Auctions header content

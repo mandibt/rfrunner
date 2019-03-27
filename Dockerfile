@@ -20,4 +20,16 @@ VOLUME /opt/robotframework/tests
 VOLUME /opt/robotframework/keywords
 VOLUME /opt/robotframework/locators
 
-ENTRYPOINT ['run_tests.sh']
+COPY bin/chromedriver.sh /opt/robotframework/bin/chromedriver
+COPY bin/chromium-browser.sh /opt/robotframework/bin/chromium-browser
+COPY bin/run-tests-in-virtual-screen.sh /opt/robotframework/bin/
+
+# FIXME: below is a workaround, as the path is ignored
+RUN mv /usr/lib64/chromium-browser/chromium-browser /usr/lib64/chromium-browser/chromium-browser-original \
+  && ln -sfv /opt/robotframework/bin/chromium-browser /usr/lib64/chromium-browser/chromium-browser
+
+# Update system path
+ENV PATH=/opt/robotframework/bin:/opt/robotframework/drivers:$PATH
+
+# Execute all robot tests
+CMD ["run-tests-in-virtual-screen.sh"]

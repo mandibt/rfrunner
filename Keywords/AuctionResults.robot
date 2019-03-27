@@ -1,9 +1,9 @@
 *** Settings ***
-Resource          ../Locators/AuctionCalendar.robot
-Resource          ../Locators/AuctionResults.robot
-Resource          ../Locators/BidFormPage.robot
-Resource          ../Locators/HomePage.robot
-Resource          ../Locators/OpenAuctions.robot
+Resource          /opt/robotframeworklocators/AuctionCalendar.robot
+Resource          /opt/robotframeworklocators/AuctionResults.robot
+Resource          /opt/robotframeworklocators/BidFormPage.robot
+Resource          /opt/robotframeworklocators/HomePage.robot
+Resource          /opt/robotframeworklocators/OpenAuctions.robot
 Library           String
 Library           SeleniumLibrary
 
