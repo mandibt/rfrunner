@@ -14,5 +14,10 @@ RUN CHROMEDRIVER_VERSION=`wget --no-verbose --output-document - https://chromedr
     unzip -qq /tmp/chromedriver_linux64.zip -d /opt/chromedriver && \
     chmod +x /opt/chromedriver/chromedriver && \
     ln -fs /opt/chromedriver/chromedriver /usr/local/bin/chromedriver
+	
+RUN mkdir -p opt/chromedriver/tests
+RUN mkdir -p opt/chromedriver/keywords
+RUN mkdir -p opt/chromedriver/locators
+RUN mkdir -p opt/chromedriver/results
 
 ENTRYPOINT ['robot']
