@@ -1,0 +1,9 @@
+#
+####### requirements.txt for installing libraries needed to run RF tests for Petco WCS #######
+#
+selenium
+robotframework == 3.0.2             				# Must be version 3.0.2 (atm 3.1 has compatibility issues with databaselibrary)
+robotframework-seleniumlibrary >=  3.1.0           	# Minimum version 3.1
+robotframework-databaselibrary            			# Any version
+cx_Oracle       									# Any version - for DB connections
+#
