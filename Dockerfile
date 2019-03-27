@@ -20,5 +20,4 @@ VOLUME /opt/robotframework/tests
 VOLUME /opt/robotframework/keywords
 VOLUME /opt/robotframework/locators
 
-
-ENTRYPOINT ['robot']
+ENTRYPOINT ['run_tests.sh']
